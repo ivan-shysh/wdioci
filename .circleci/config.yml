@@ -30,14 +30,14 @@ jobs:
       #     pkg-manager: yarn 
       - run:
           name: Run tests
-          command: 
+          command: |
             npm run test:chrome:headless
             npm run report:generate
             zip -r allure-report.zip allure-report
       - run:
          when: on_fail
          name: Generate fail results
-         command:
+         command: |
            npm run report:generate
            zip -r allure-report.zip allure-report
       - store_artifacts:
