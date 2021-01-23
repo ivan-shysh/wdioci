@@ -40,8 +40,8 @@ jobs:
          command:
            npm run report:generate
            zip -r allure-report.zip allure-report
--store_artifacts:
-        path: allure-report.zip
+      -store_artifacts:
+         path: allure-report.zip
 
 workflows:
   # Below is the definition of your workflow.
